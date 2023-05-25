@@ -7,8 +7,7 @@ import { createApi } from '@/api'
 import App from '@/App.vue'
 import router from '@/router'
 
-const { start } = await import('@/mocks/browser')
-start()
+import('@/mocks/browser').then(({ start }) => start())
 
 const app = createApp(App)
 
