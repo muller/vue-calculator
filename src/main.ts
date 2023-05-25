@@ -7,10 +7,8 @@ import { createApi } from '@/api'
 import App from '@/App.vue'
 import router from '@/router'
 
-if (process.env.NODE_ENV === 'development') {
-    const { start } = await import('@/mocks/browser')
-    start()
-}
+const { start } = await import('@/mocks/browser')
+start()
 
 const app = createApp(App)
 
